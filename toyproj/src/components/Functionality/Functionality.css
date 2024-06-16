@@ -1,0 +1,144 @@
+body {
+  color: white;
+  font-family: 'Poppins';
+}
+
+.pageOne{
+  margin: 0px 50px;
+  color: white;
+  padding: 8%;
+}
+
+.ftext {
+  font-family: 'Poppins';
+  text-align: center;
+}
+
+.ftext h1{
+  margin-bottom:20px;
+  font-weight: 900;
+}
+
+.ftext h2{
+  font-weight: 500;
+  font-size: 15px;
+  margin-top: 0;
+  margin-bottom: 50px;
+}
+
+.search-box{
+  display: flex;
+  align-items: center; /* y-axis */
+  justify-content: center; /* x-axis */
+  padding: 4px;
+  margin-bottom: 5%;
+}
+
+.search-box input{
+  font-family: 'Poppins';
+  border-radius: 20px;
+  border-style: none;
+  padding: 10px 15px;
+  width: 50%;
+  position:relative;
+}
+
+.search-box input:focus {
+  outline: red solid 2px;
+}
+
+.search-box button{
+  font-family: 'Poppins';
+  border-radius: 100%;
+  border-style: none;
+  padding: 5px 10px;
+  margin-left: 5px;
+  cursor: pointer;
+  color: white;
+  background: pink;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: transform 0.3s ease, background-color 1s ease;
+}
+
+.search-box button:hover{
+  background-color: rgb(250,156,159);
+  transform: scale(1.1); 
+}
+
+.search-box button:active{
+  animation: bounce 0.3s;
+}
+
+.search-box img {
+  width: 100%;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.page-dots-display{
+  
+}
+
+.page-dots{
+  color: white;
+  display:flex;
+  justify-content: center;
+  gap: 3%;
+  margin: 0px 50px;
+  font-size: 25px;
+  cursor: pointer;
+}
+
+.red {
+  color: red;
+  cursor: pointer;
+}
+
+.page-dots li:hover{
+  color: grey;
+}
+
+.none {
+  display:none;
+}
+
+.play{
+  display:flex;
+  justify-content: right;
+  align-items: center; /* y-axis */
+  margin: 0px 50px;
+}
+
+.play img{
+  width: 30px;
+  cursor: pointer;
+}
+
+.card {
+  background: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: fit-content;
+  padding: 20px;
+  border-radius: 15px;
+}
+
+.card .title {
+  color: black;
+  text-align: center;
+}

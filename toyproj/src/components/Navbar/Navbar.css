@@ -1,0 +1,42 @@
+.nav{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px 50px;
+  color: white; 
+  height: 50px;
+}
+
+.nav-logo{
+  font-family: "Poppins", sans-serif;
+  font-size: 100%;
+  font-weight: 500; 
+  cursor: pointer;
+}
+
+.nav-menu{
+  font-family: "Poppins", sans-serif;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  font-size: 100%;
+  gap: 40px;
+  right:0;
+  cursor: pointer;
+}
+
+.nav-menu li {
+  padding: 5px 8px;
+  margin:0;
+}
+
+.nav-menu li:hover {
+  background: rgba(255, 255, 255, 0.4);
+  border-radius: 15px;
+}
+
+.selected {
+  background: rgb(255, 255, 255);
+  border-radius: 15px;  
+  color: black;
+}

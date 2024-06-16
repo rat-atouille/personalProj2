@@ -1,0 +1,47 @@
+[
+  { 
+    "title": "Inside Out",
+    "director": ["Pete Docter", "Ronnie Del Carmen"],
+    "year": 2015,
+    "genre": ["Adventure", "Animation", "Comedy"],
+    "quote:": "The art of accepting your emotions.",
+    "poster": ""
+  }, { 
+    "title": "Soul",
+    "director": "Pete Docter",
+    "year": 2020,
+    "genre": ["Family", "Fantasy", "Animation", "Comedy"],
+    "quote:": "Might be a bit cliche but still made me cry.",
+    "poster": ""
+  }, { 
+    "title": "If Only",
+    "director": "Gil Junger",
+    "year": 2004,
+    "genre": "Romance",
+    "quote:":"Answer to does true love exist? question.",
+    "poster": ""
+  },{ 
+    "title": "Toy Story",
+    "director": "John Lasseter",
+    "year": 1995,
+    "genre": ["Family", "Comedy","Animation"],
+    "quote:":"“That wasn't flying. That was falling with style.”",
+    "poster": ""
+},{ 
+  "title": "Begin Again",
+  "director": "John Carney",
+  "year": 2014,
+  "genre": ["Comedy"],
+  "quote:":"For all those music lovers out there.",
+  "poster": ""
+},{ 
+  "title": "A Tale of Two Sisters",
+  "director": "Kim Jeewoon",
+  "year": 2003,
+  "genre": ["Thriller", "Mystery", "Horror"],
+  "quote:":"Unbelievable mise en scene",
+  "poster": ""
+}
+
+  
+]
