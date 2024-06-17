@@ -6,7 +6,7 @@ import Functionality from "./components/Functionality/Functionality";
 const App = () => {
   const mess = [
     { text1: "Hello there!", text2: "What movie are you searching for today?" },
-    { text1: "Goodbye", text2: "World" },
+    { text1: "Welcome", text2: "Did you prepare popcorn?" },
   ];
 
   const [messCount, setMessCount] = useState(0);
@@ -31,8 +31,6 @@ const App = () => {
       <Functionality
         setPlayStatus={setPlayStatus}
         mess={mess[messCount]}
-        messCount={messCount}
-        setMessCount={setMessCount}
         playStatus={playStatus}
         pageCount={pageCount}
         setPageCount={setPageCount}

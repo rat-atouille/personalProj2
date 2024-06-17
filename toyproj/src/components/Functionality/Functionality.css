@@ -3,7 +3,11 @@ body {
   font-family: 'Poppins';
 }
 
-.pageOne{
+.func{
+  overflow: hidden;
+}
+
+.pageOne {
   margin: 0px 50px;
   color: white;
   padding: 8%;
@@ -14,19 +18,19 @@ body {
   text-align: center;
 }
 
-.ftext h1{
-  margin-bottom:20px;
+.ftext h1 {
+  margin-bottom: 20px;
   font-weight: 900;
 }
 
-.ftext h2{
+.ftext h2 {
   font-weight: 500;
   font-size: 15px;
   margin-top: 0;
   margin-bottom: 50px;
 }
 
-.search-box{
+.search-box {
   display: flex;
   align-items: center; /* y-axis */
   justify-content: center; /* x-axis */
@@ -34,20 +38,26 @@ body {
   margin-bottom: 5%;
 }
 
-.search-box input{
+.search-box input {
   font-family: 'Poppins';
   border-radius: 20px;
   border-style: none;
   padding: 10px 15px;
   width: 50%;
-  position:relative;
+  position: relative;
+  transition: transform 0.3s ease, background-color 1s ease;
 }
 
 .search-box input:focus {
-  outline: red solid 2px;
+  outline: none;
 }
 
-.search-box button{
+.search-box input:hover {
+  transform: scale(1.1);
+  background-color: rgb(255, 233, 233);
+}
+
+.search-box button {
   font-family: 'Poppins';
   border-radius: 100%;
   border-style: none;
@@ -64,12 +74,12 @@ body {
   transition: transform 0.3s ease, background-color 1s ease;
 }
 
-.search-box button:hover{
-  background-color: rgb(250,156,159);
-  transform: scale(1.1); 
+.search-box button:hover {
+  background-color: rgb(250, 156, 159);
+  transform: scale(1.1);
 }
 
-.search-box button:active{
+.search-box button:active {
   animation: bounce 0.3s;
 }
 
@@ -88,57 +98,170 @@ body {
     transform: scale(1);
   }
 }
-
-.page-dots-display{
-  
+.page-dots-display {
+  position: absolute;
+  bottom: 10%;
+  width: 96%;
 }
 
-.page-dots{
+.page-dots {
   color: white;
-  display:flex;
+  display: flex;
   justify-content: center;
   gap: 3%;
   margin: 0px 50px;
   font-size: 25px;
-  cursor: pointer;
 }
 
 .red {
   color: red;
-  cursor: pointer;
 }
 
-.page-dots li:hover{
+.page-dots li:hover {
   color: grey;
+  cursor: pointer;
 }
 
 .none {
-  display:none;
+  display: none;
 }
 
-.play{
-  display:flex;
+.play {
+  display: flex;
   justify-content: right;
-  align-items: center; /* y-axis */
+  align-items: center;
   margin: 0px 50px;
 }
 
-.play img{
+.play img {
   width: 30px;
   cursor: pointer;
+  transition: transform 0.3s ease;
 }
 
+.play img:hover {
+  transform: scale(1.1);
+}
 .card {
   background: white;
-  display: flex;
-  align-items: center;
-  justify-content: center;
   width: fit-content;
   padding: 20px;
   border-radius: 15px;
+  height: 180px;
 }
 
 .card .title {
   color: black;
   text-align: center;
+  font-size: 1vh;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+}
+
+.card .poster img {
+  width: 100%;
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutLeft {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
+}
+
+@keyframes slideOutRight {
+  from {
+    transform: translateX(0);
+    opacity: 1;
+  }
+  to {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+}
+
+.pageOne, .pageTwo {
+  animation-duration: 0.5s;
+  animation-fill-mode: both;
+}
+
+.pageTwo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0px 50px;
+  padding: 10%;
+  background-color: green;
+}
+
+.card-container {
+  display: flex;
+  align-items: center;
+  gap: 20px;
+  overflow: auto;
+  padding-bottom: 10px;
+  margin:0px;
+  background-color: blue;
+}
+
+.card-container::-webkit-scrollbar-thumb {
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+.card-container::-webkit-scrollbar {
+  width: 5px;
+  height: 5px;
+  background-color: none;
+}
+
+.pageOne.slideInRight,
+.pageTwo.slideInRight {
+  animation-name: slideInRight;
+}
+
+.pageOne.slideOutLeft,
+.pageTwo.slideOutLeft {
+  animation-name: slideOutLeft;
+}
+
+.pageOne.slideInLeft,
+.pageTwo.slideInLeft {
+  animation-name: slideInLeft;
+}
+
+.pageOne.slideOutRight,
+.pageTwo.slideOutRight {
+  animation-name: slideOutRight;
 }
